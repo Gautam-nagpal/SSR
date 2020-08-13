@@ -14,8 +14,8 @@ function Homepage(props) {
 
     useEffect(() => {
         let query = { limit: 100 }
-        if (window.location.search) {
-            query = qs.parse(window.location.search.substr(1))
+        if (history.location.search) {
+            query = qs.parse(history.location.search.substr(1))
         }
         getAPIData(query)
     }, [history.location.search])
@@ -26,7 +26,7 @@ function Homepage(props) {
     }
 
     const onChangeFilters = (key, type) => {
-        let query = qs.parse(window.location.search.substr(1))
+        let query = qs.parse(history.location.search.substr(1))
 
         let obj = {
             ...query,
@@ -41,8 +41,8 @@ function Homepage(props) {
         history.push(queryString)
     }
 
-    let selectedFilters = qs.parse(window.location.search.substr(1))
-
+    let selectedFilters = qs.parse(history.location.search.substr(1))
+    console.log(history, props, "--------");
     return (
         <div>
             <div>
