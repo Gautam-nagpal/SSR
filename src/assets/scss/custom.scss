@@ -1,0 +1,155 @@
+/*
+ * Specific styles of signin component
+ */
+/*
+ * General styles
+ */
+ body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+}
+
+.title-heading{
+    display: flex;
+    padding: 10px;
+}
+
+.main-section{
+    display:flex;
+    .filters-category{
+        width: 25%;
+        .filters-section{
+            background-color: white;
+            margin: 10px;
+            .sub-filters-heading{
+                border-bottom: 1px solid black;
+                margin: 0 60px;
+            }
+            .sub-filters{
+                text-align: left;
+                .sub-filters-button-section{
+                    width: 50%;
+                    display: inline-block;
+                    padding: 5px;
+                    text-align: center;
+                    .sub-filters-button{
+                        background-color: #c5e099;
+                        border: none;
+                        padding: 8px 16px;
+                        border-radius: 8px;
+                    }
+                    .selected-filter-btn{
+                        background-color: #7cba01 ;
+                        border: none;
+                        padding: 8px 16px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    .cards-category{
+        width: 75%;
+        .cards-section{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .rep-grid{
+                width: 25%;
+                float: left;
+                padding: 10px;
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    min-height: 475px;
+                    text-align: left;
+                    .card-image-container{
+                        display: flex;
+                        background-color: #f2f2f2;
+                        flex-wrap: wrap;
+                        border-radius: 8px;
+                        img{
+                            width: 100%;
+                            max-width: 300px;
+                        }
+                    }
+                    .card-mission-name{
+                        color: #46518b;
+                     }
+                }
+            }
+
+            .no-result-found{
+                font-weight: 600;
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1440px){
+    .main-section{
+        .filters-category {
+            width: 25%;
+        }
+        .cards-category {
+            width: 75%;
+        }
+    }
+
+}
+@media (max-width: 1024px){
+    .main-section{
+        .filters-category {
+            width: 40%;
+        }
+        .cards-category {
+            width: 60%;
+            .cards-section{
+                .rep-grid{
+                    width: 50%;
+                    .card{
+                        min-height: 400px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
+@media (max-width: 700px){
+    .main-section{
+        display:block;
+        .filters-category {
+            width: 100%;
+        }
+        .cards-category {
+            width: 95%;
+            .cards-section{
+                display: block;
+                .rep-grid{
+                    width: 100%;
+                    .card{
+                        min-height: auto;
+                        .card-image-container{
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
