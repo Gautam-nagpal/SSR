@@ -42,7 +42,6 @@ function Homepage(props) {
     }
 
     let selectedFilters = qs.parse(history.location.search.substr(1))
-    console.log(history, props, "--------");
     return (
         <div>
             <div>
